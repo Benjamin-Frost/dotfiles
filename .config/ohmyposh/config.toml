@@ -1,0 +1,52 @@
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+
+version = 3
+console_title_template = "{{.UserName}}@{{.HostName}}"
+final_space = true
+
+[[blocks]]
+alignment = "left"
+type = "prompt"
+
+  [[blocks.segments]]
+  type = "path"
+  style = "plain"
+  foreground = "blue"
+  template = "{{ .Path }} "
+  
+    [blocks.segments.properties]
+    style = "full"
+
+  [[blocks.segments]]
+  type = "git"
+  style = "plain"
+  foreground = "green"
+  template = "{{ .HEAD }} "
+
+    [blocks.segments.properties]
+    branch_icon = "\ue725 "
+    cherry_pick_icon = "\ue29b "
+    commit_icon = "\uf417 "
+    fetch_status = false
+    fetch_upstream_icon = false
+    merge_icon = "\ue727 "
+    no_commits_icon = "\uf0c3 "
+    rebase_icon = "\ue728 "
+    revert_icon = "\uf0e2 "
+    tag_icon = "\uf412 "
+
+  [[blocks.segments]]
+  type = "text"
+  style = "plain"
+  foreground = "magenta"
+  template = "\uf105"
+
+[[blocks]]
+type = "rprompt"
+overflow = "hidden"
+
+  [[blocks.segments]]
+  type = "executiontime"
+  style = "plain"
+  foreground = "yellow"
+  template = "{{ .FormattedMs }}"
