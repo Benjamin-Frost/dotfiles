@@ -67,8 +67,8 @@ automatically-unhide-macos-hidden-apps = true
     alt-tab = 'workspace-back-and-forth'
     alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
-    alt-b = 'exec-and-forget open -a /Applications/Zen.app'
-    alt-c = 'exec-and-forget open -a /Applications/Ghostty.app'
+    # alt-b = 'exec-and-forget open -a /Applications/Zen.app'
+    # alt-c = 'exec-and-forget open -a /Applications/Ghostty.app'
 
     alt-w = 'close'
 
