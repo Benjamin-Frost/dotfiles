@@ -1,0 +1,49 @@
+#!/bin/sh
+
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEM_DIR="$CONFIG_DIR/items"
+
+# Load shared configuration
+source "$CONFIG_DIR/fonts.sh"
+
+# Bar Appearance
+bar=(
+  height=35
+  blur_radius=30
+  position=top
+  sticky=off
+  padding_left=10
+  padding_right=10
+  color=0x20000000
+)
+sketchybar --bar "${bar[@]}"
+
+# Defaults
+defaults=(
+  icon.font="$FONT_REGULAR"
+  label.font="$FONT_REGULAR"
+  padding_left=5
+  padding_right=5
+  icon.padding_left=4
+  icon.padding_right=8
+  label.padding_left=4
+  label.padding_right=4
+)
+sketchybar --default "${defaults[@]}"
+
+# Left Side Items
+source "$ITEM_DIR/spaces.sh"
+
+# Notch Left Side Items
+source $ITEM_DIR/front_app.sh
+
+# Notch Right Side Items
+source "$ITEM_DIR/spotify.sh"
+
+# Right Side Items
+source "$ITEM_DIR/datetime.sh"
+source "$ITEM_DIR/volume.sh"
+source "$ITEM_DIR/battery.sh"
+
+# Force all scripts to run the first time (never do this in a script)
+sketchybar --update
