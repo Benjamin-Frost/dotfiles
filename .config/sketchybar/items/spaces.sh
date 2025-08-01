@@ -15,7 +15,7 @@ sketchybar --add item monitor_change_handler left \
                  script="$CONFIG_DIR/plugins/aerospace.sh update_cache" \
            --subscribe monitor_change_handler \
                        aerospace_monitor_change \
-                       display_change
+                       space_change
 
 # Workspace items
 for sid in $(aerospace list-workspaces --all); do
