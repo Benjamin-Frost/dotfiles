@@ -1,6 +1,6 @@
 # dotfiles
 
-This repository contains my personal dotfiles for MacOS.
+This repository contains my personal dotfiles for macOS.
 
 ## Requirements
 
