@@ -17,6 +17,6 @@ case "${PERCENTAGE}" in
   *) ICON="􀛪"
 esac
 
-[ -n "$CHARGING" ] && ICON="$CHARGING_ICON"
+[ -n "$CHARGING" ] && ICON="􀢋"
 
 sketchybar --set "$NAME" icon="$ICON" label="${PERCENTAGE}%"
